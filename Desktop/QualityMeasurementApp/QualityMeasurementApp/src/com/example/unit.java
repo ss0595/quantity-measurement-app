@@ -1,16 +1,18 @@
-public enum Unit {
-    FEET(12.0),          // 1 ft = 12 inches
-    INCH(1.0),           // base unit
-    YARD(36.0),          // 1 yard = 3 feet = 36 inches
-    CM(0.393701);        // 1 cm = 0.393701 inches
+public enum unit {
+    FEET(1.0),
+    INCH(1.0 / 12.0);
 
-    private final double toBaseFactor;
+    private final double toFeet;
 
-    Unit(double factor) {
-        this.toBaseFactor = factor;
+    unit(double toFeet) {
+        this.toFeet = toFeet;
     }
 
     public double toBase(double value) {
-        return value * toBaseFactor;
+        return value * toFeet;
+    }
+
+    public double fromBase(double baseValue) {
+        return baseValue / toFeet;
     }
 }
