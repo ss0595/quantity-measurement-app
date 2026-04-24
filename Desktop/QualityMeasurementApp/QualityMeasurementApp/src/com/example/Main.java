@@ -1,16 +1,16 @@
 public class Main {
     public static void main(String[] args) {
 
-        // UC1
+        // UC1 (Feet)
         System.out.println("Feet equality: " +
-                QuantityMeasurementApp.compareFeet(5, 5));
+                QuantityMeasurementApp.compare(5, Unit.FEET, 5, Unit.FEET));
 
-        // UC2 - Inch
+        // UC2 (Inch)
         System.out.println("Inch equality: " +
-                QuantityMeasurementApp.compareInch(12, 12));
+                QuantityMeasurementApp.compare(12, Unit.INCH, 12, Unit.INCH));
 
-        // UC2 - Feet vs Inch
-        System.out.println("Feet to Inch equality: " +
-                QuantityMeasurementApp.compareFeetAndInch(1, 12));
+        // UC2 (Feet vs Inch)
+        System.out.println("Feet vs Inch: " +
+                QuantityMeasurementApp.compare(1, Unit.FEET, 12, Unit.INCH));
     }
 }
