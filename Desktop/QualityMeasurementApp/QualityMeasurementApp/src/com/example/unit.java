@@ -1,6 +1,8 @@
 public enum Unit {
-    FEET(12.0),
-    INCH(1.0);
+    FEET(12.0),          // 1 ft = 12 inches
+    INCH(1.0),           // base unit
+    YARD(36.0),          // 1 yard = 3 feet = 36 inches
+    CM(0.393701);        // 1 cm = 0.393701 inches
 
     private final double toBaseFactor;
 
